@@ -1,6 +1,9 @@
 ./mnist/mnist/all/6/00000.png,6
+./mnist/mnist/all/6/00001 (2).png,6
 ./mnist/mnist/all/6/00001.png,6
+./mnist/mnist/all/6/00002 (2).png,6
 ./mnist/mnist/all/6/00002.png,6
+./mnist/mnist/all/6/00003 (2).png,6
 ./mnist/mnist/all/6/00003.png,6
 ./mnist/mnist/all/6/00004.png,6
 ./mnist/mnist/all/6/00011.png,6

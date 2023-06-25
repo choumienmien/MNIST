@@ -1,5 +1,7 @@
 ./mnist/mnist/all/8/00000.png,8
+./mnist/mnist/all/8/00001 (2).png,8
 ./mnist/mnist/all/8/00001.png,8
+./mnist/mnist/all/8/00002 (2).png,8
 ./mnist/mnist/all/8/00002.png,8
 ./mnist/mnist/all/8/00017.png,8
 ./mnist/mnist/all/8/00031.png,8

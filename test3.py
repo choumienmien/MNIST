@@ -16,9 +16,11 @@ from sklearn.model_selection import KFold
 def input_pic_txt():
     for num in range(10):
         name = num
-        img_path = './mnist/mnist/all/%s/' % name
+        # img_path = './mnist/mnist/all/%s/' % name #訓練
+        img_path = './mnist/mnist/test_myself/%s/' % name  # 測試
         print(img_path)
-        TxtName = './mnist/mnist/individual_txt_file/data%s .txt' % name
+        # TxtName = './mnist/mnist/individual_txt_file/data%s .txt' % name  # 訓練
+        TxtName = './mnist/mnist/individual_test_file/data%s .txt' % name  # 測試
         f = open(TxtName, 'a')
         img_path_Line = os.listdir(img_path)
         for ImgName in img_path_Line:
@@ -33,10 +35,12 @@ def input_pic_txt():
 # 將所有照片0-9寫入的tx，製作all.txt
 def write_txt():
     # -*- coding:UTF-8 -*-
-    fq = open('./mnist/mnist/all.txt', 'a')  # 这里用追加模式
+    # fq = open('./mnist/mnist/all.txt', 'a')  # 这里用追加模式 #訓練
+    fq = open('./mnist/mnist/test.txt', 'w')  # 測試
     for i in range(10):
         name = i
-        TxtName = './mnist/mnist/individual_txt_file/data%s .txt' % name
+        # TxtName = './mnist/mnist/individual_txt_file/data%s .txt' % name  #訓練
+        TxtName = './mnist/mnist/individual_test_file/data%s .txt' % name  # 測試
         fp = open(TxtName, 'r')
         for line in fp:
             fq.write(line)
@@ -285,24 +289,9 @@ if __name__ == '__main__':
     # exit()
     # -------------------------------------超参数定义-------------------------------------
     batch_size = 128  # 一个batch的size
-    learning_rate = 0.01
+    learning_rate = 0.02
     num_epoches = 7  # 总样本的迭代次数
     fold_num = 4
-
-    # train_label = './mnist/mnist/all.txt'  # 输入训练集的txt
-    # train_img_list, train_label_list = get_path_label(train_label)
-    # # 训练和测试集预处理
-    #
-    # train_dataset = MnistDataset(train_img_list, train_label_list,
-    #                              transform=transforms.Compose([transforms.ToTensor()]))  # 训练集dataset数据预处
-    # train_dataset = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
-
-    # resized_tensor_list = [tensor.view(3, 28, 28) for tensor in train_dataset]
-    # stacked_tensor = torch.stack(resized_tensor_list)
-    # for i in train_dataset:
-    #     img, label = i
-    #     if img.size() != torch.Size([128, 3, 28, 28]):
-    #         print(img.size(), label)
 
     # -------------------------------------选择模型--------------------------------------
     model = simpleNet(3 * 28 * 28, 300, 100, 10)
@@ -317,8 +306,7 @@ if __name__ == '__main__':
     save_path = "C:/Users/mandy chou/Desktop/MNIST/perceptron5.pt"
     # 获取测试集路径列表和标签列表
     # 測試模型
-    # test_label = './mnist/mnist/test.txt'  # 输入测试集的txt
-    test_label = './mnist/mnist/test_myself.txt'
+    test_label = './mnist/mnist/test.txt'  # 输入测试集的txt
     test_img_list, test_label_list = get_path_label(test_label)
     # 训练集dataset
     test_dataset = MnistDataset(test_img_list, test_label_list, transform=transforms.Compose([transforms.ToTensor()]))
