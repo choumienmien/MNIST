@@ -1,6 +1,10 @@
 import csv
+import math
 import os
+import random
 import sys
+
+
 import numpy as np
 import pandas as pd
 import torch
@@ -17,11 +21,11 @@ def input_pic_txt():
     for num in range(10):
         name = num
         # img_path = './mnist/mnist/all/%s/' % name #訓練
-        img_path = './mnist/mnist/test_myself/%s/' % name  # 測試
+        img_path = './mnist/mnist/test_myself_d/%s/' % name  # 測試
         print(img_path)
         # TxtName = './mnist/mnist/individual_txt_file/data%s .txt' % name  # 訓練
-        TxtName = './mnist/mnist/individual_test_file/data%s .txt' % name  # 測試
-        f = open(TxtName, 'a')
+        TxtName = './mnist/mnist/individual_txt_test_file/data%s .txt' % name  # 測試
+        f = open(TxtName, 'w')
         img_path_Line = os.listdir(img_path)
         for ImgName in img_path_Line:
             label = "%s" % name  # 修改你标签的名字
@@ -35,12 +39,12 @@ def input_pic_txt():
 # 將所有照片0-9寫入的tx，製作all.txt
 def write_txt():
     # -*- coding:UTF-8 -*-
-    # fq = open('./mnist/mnist/all.txt', 'a')  # 这里用追加模式 #訓練
-    fq = open('./mnist/mnist/test.txt', 'w')  # 測試
+    # fq = open('./mnist/mnist/all.txt', 'w')  # 这里用追加模式 #訓練
+    fq = open('./mnist/mnist/test_m.txt', 'w')  # 測試
     for i in range(10):
         name = i
         # TxtName = './mnist/mnist/individual_txt_file/data%s .txt' % name  #訓練
-        TxtName = './mnist/mnist/individual_test_file/data%s .txt' % name  # 測試
+        TxtName = './mnist/mnist/individual_txt_test_file/data%s .txt' % name  # 測試
         fp = open(TxtName, 'r')
         for line in fp:
             fq.write(line)
@@ -49,32 +53,32 @@ def write_txt():
 
 
 # -*- coding:utf-8 -*-
-# # 在txt文件中随机抽取行
-# def split_train_valid():
-#     All = open('./mnist/mnist/All.txt', 'r', encoding='utf-8')  # 要被抽取的文件All.txt，共63,131行
-#     trainf = open('./mnist/mnist/train.txt', 'w', encoding='utf-8')  # 抽取的0.7倍写入train.txt
-#     testf = open('./mnist/mnist/test.txt', 'w', encoding='utf-8')  # 抽取的0.3倍写入test.txt
-#     AllNum = 63131  # 总图像数
-#     SetTrainNum = 0.7  # 设置比例
-#     SetvalidNum = 0.3
-#
-#     trainNum = math.floor(SetTrainNum * AllNum)
-#     validNum = math.floor(SetvalidNum * AllNum)
-#
-#     trainresultList = random.sample(range(0, AllNum), trainNum)  # sample(x,y)函数的作用是从序列x中，随机选择y个不重复的元素
-#     validresultList = random.sample(range(0, AllNum), validNum)  # sample(x,y)函数的作用是从序列x中，随机选择y个不重复的元素
-#
-#     lines = All.readlines()
-#     for i in trainresultList:
-#         trainf.write(lines[i])
-#     trainf.close()
-#     for i in validresultList:
-#         testf.write(lines[i])
-#     testf.close()
-#     All.close()
+# 在txt文件中随机抽取行
+def split_train_test():
+    All = open('./mnist/mnist/all.txt', 'r', encoding='utf-8')  # 要被抽取的文件All.txt，共63,131行
+    trainf = open('./mnist/mnist/train.txt', 'w', encoding='utf-8')  # 抽取的0.7倍写入train.txt
+    testf = open('./mnist/mnist/test.txt', 'w', encoding='utf-8')  # 抽取的0.3倍写入test.txt
+    AllNum = 69166  # 总图像数
+    SetTrainNum = 0.9  # 设置比例
+    SetTestNum = 0.1
+
+    trainNum = math.floor(SetTrainNum * AllNum)
+    testNum = math.floor(SetTestNum * AllNum)
+
+    trainresultList = random.sample(range(0, AllNum), trainNum)  # sample(x,y)函数的作用是从序列x中，随机选择y个不重复的元素
+    testresultList = random.sample(range(0, AllNum), testNum)  # sample(x,y)函数的作用是从序列x中，随机选择y个不重复的元素
+
+    lines = All.readlines()
+    for i in trainresultList:
+        trainf.write(lines[i])
+    trainf.close()
+    for i in testresultList:
+        testf.write(lines[i])
+    testf.close()
+    All.close()
 
 
-# split_train_valid()
+#
 # pass
 # #定义读取文件的格式
 
@@ -122,10 +126,18 @@ class simpleNet(nn.Module):
     """
 
     def __init__(self, in_dim, n_hidden_1, n_hidden_2, out_dim):
+    # """
+    #     定义了一个简单的三层全连接神经网络，每一层都是线性的
+    # """
+    #     super(simpleNet, self).__init__()
+    #     self.layer1 = nn.Linear(in_dim, n_hidden_1)
+    #     self.layer2 = nn.Linear(n_hidden_1, n_hidden_2)
+    #     self.layer3 = nn.Linear(n_hidden_2, out_dim)
         super(simpleNet, self).__init__()
-        self.layer1 = nn.Linear(in_dim, n_hidden_1)
-        self.layer2 = nn.Linear(n_hidden_1, n_hidden_2)
-        self.layer3 = nn.Linear(n_hidden_2, out_dim)
+        # 在上面的Activation_Net的基础上，增加了一个加快收敛速度的方法——批标准化
+        self.layer1 = nn.Sequential(nn.Linear(in_dim, n_hidden_1), nn.BatchNorm1d(n_hidden_1), nn.ReLU(True))
+        self.layer2 = nn.Sequential(nn.Linear(n_hidden_1, n_hidden_2), nn.BatchNorm1d(n_hidden_2), nn.ReLU(True))
+        self.layer3 = nn.Sequential(nn.Linear(n_hidden_2, out_dim))
 
     def forward(self, x):
         x = self.layer1(x)
@@ -218,14 +230,14 @@ def test(save_path, model, criterion, test_loader):
         # # 輸出原始圖
 
         print('num_of_testData:', len(test_dataset))
-        for i, (batch_x, batch_y) in enumerate(test_loader):
-            print(i, batch_x.size(), batch_y.size())
-            show_batch(batch_x)
-            plt.axis('off')
-            plt.show()
-        # for i in test_loader:
-        #     img, label = i
-        #     print(img.size(), label)
+        # for i, (batch_x, batch_y) in enumerate(test_loader):
+        #     print(i, batch_x.size(), batch_y.size())
+        #     show_batch(batch_x)
+        #     plt.axis('off')
+        #     plt.show()
+        for i in test_loader:
+            img, label = i
+            print(img.size(), label)
         sys.exit('測試資料輸出結束')
 
     else:
@@ -286,10 +298,11 @@ if __name__ == '__main__':
     # ----------------------------------只要一次生成自己的數據庫----------------------------------
     # input_pic_txt()
     # write_txt()
+    # split_train_test()
     # exit()
     # -------------------------------------超参数定义-------------------------------------
-    batch_size = 128  # 一个batch的size
-    learning_rate = 0.02
+    batch_size = 64  # 一个batch的size
+    learning_rate = 0.01
     num_epoches = 7  # 总样本的迭代次数
     fold_num = 4
 
@@ -301,12 +314,12 @@ if __name__ == '__main__':
     # -------------------------------------定义损失函数和优化器--------------------------------------
     # -------------------------------------交叉熵和SGD优化器-------------------------------------
     criterion = nn.CrossEntropyLoss()  # softmax与交叉熵一起
-    optimizer = optim.SGD(model.parameters(), lr=learning_rate)
+    optimizer = optim.Adam(model.parameters(), lr=learning_rate)
     # -------------------------------------測試資料-------------------------------------
     save_path = "C:/Users/mandy chou/Desktop/MNIST/perceptron5.pt"
     # 获取测试集路径列表和标签列表
     # 測試模型
-    test_label = './mnist/mnist/test.txt'  # 输入测试集的txt
+    test_label = './mnist/mnist/test_m.txt'  # 输入测试集的txt
     test_img_list, test_label_list = get_path_label(test_label)
     # 训练集dataset
     test_dataset = MnistDataset(test_img_list, test_label_list, transform=transforms.Compose([transforms.ToTensor()]))
@@ -319,7 +332,7 @@ if __name__ == '__main__':
     # -------------------------------------訓練與驗證-------------------------------------
     # 訓練與驗證
     # 获取训练集路径列表和标签列表
-    train_label = './mnist/mnist/all.txt'  # 输入训练集的txt
+    train_label = './mnist/mnist/train.txt'  # 输入训练集的txt
     train_img_list, train_label_list = get_path_label(train_label)
     # 训练和测试集预处理
 
