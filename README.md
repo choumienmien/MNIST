@@ -12,17 +12,24 @@
 - 使用PyTorch框架創建一個帶有3層全連接網絡模型  
 - 損失函數:交叉熵(CrossEntropyLoss)
 - 最佳化器 (Optimizer) ：Adam()
+- 使用 CNN 模型
 
 #### 驗證模型(Cross-Validation)
-使用 K-Fold 方法進行測試資料劃分
-![image](https://github.com/choumienmien/MNIST/assets/37107594/2bd3bec5-8f76-4f63-9b92-ccba39bbc634)
-[資料來源](https://ithelp.ithome.com.tw/articles/10279240)
+使用 K-Fold 方法進行測試資料劃分[圖片來源](https://ithelp.ithome.com.tw/articles/10279240)
+![image](https://github.com/choumienmien/MNIST/assets/37107594/155a25bd-a1e0-4825-b54e-6c610a4d2c7a)
+
 - 資料分為「訓練階段(Train Phase)」以及「測試階段(Test Phase)」，
 - 透過K-Fold將訓練階段的數據，分為訓練集(Training Set)與驗證集(Valid Set)
 - 將訓練資料劃分成4、5、6個fold來看哪一個 fold 的準確率比較高，以作為測試階段的模型。
 
 #### 參數設定
-使用 CNN 模型
+
+## 資料來源
+* [动手撸个自己的数据集进行训练Pytorch框架（索引式）](https://juejin.cn/post/7078130257970069518 "懸停顯示")
+* [MNIST数据集的读取、显示以及全连接实现数字识别](https://blog.csdn.net/QLeelq/article/details/121069095 "懸停顯示")
+* [MNIST集的测试(详细步骤)](https://blog.csdn.net/whale_ss/article/details/129939960?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-129939960-blog-123781738.235%5Ev38%5Epc_relevant_default_base3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-129939960-blog-123781738.235%5Ev38%5Epc_relevant_default_base3&utm_relevant_index=5 "懸停顯示")
+* [PyTorch基础入门六：PyTorch搭建卷积神经网络实现MNIST手写数字识别](https://blog.csdn.net/out_of_memory_error/article/details/81434907 "懸停顯示")
+
 
 
   
