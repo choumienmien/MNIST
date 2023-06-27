@@ -319,7 +319,7 @@ if __name__ == '__main__':
     save_path = "C:/Users/mandy chou/Desktop/MNIST/perceptron5.pt"
     # 获取测试集路径列表和标签列表
     # 測試模型
-    test_label = './mnist/mnist/test_m.txt'  # 输入测试集的txt
+    test_label = './mnist/mnist/test.txt'  # 输入测试集的txt
     test_img_list, test_label_list = get_path_label(test_label)
     # 训练集dataset
     test_dataset = MnistDataset(test_img_list, test_label_list, transform=transforms.Compose([transforms.ToTensor()]))

@@ -1,0 +1,3 @@
+./mnist/mnist/test_myself_d/4/00001.png,4
+./mnist/mnist/test_myself_d/4/00002.png,4
+./mnist/mnist/test_myself_d/4/00003.png,4

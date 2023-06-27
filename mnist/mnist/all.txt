@@ -1,7 +1,11 @@
 ./mnist/mnist/all/0/00000.png,0
+./mnist/mnist/all/0/00001 (2).png,0
 ./mnist/mnist/all/0/00001.png,0
+./mnist/mnist/all/0/00002 (2).png,0
 ./mnist/mnist/all/0/00002.png,0
+./mnist/mnist/all/0/00003 (2).png,0
 ./mnist/mnist/all/0/00003.png,0
+./mnist/mnist/all/0/00004 (2).png,0
 ./mnist/mnist/all/0/00004.png,0
 ./mnist/mnist/all/0/00005.png,0
 ./mnist/mnist/all/0/00010.png,0
@@ -6800,12 +6804,16 @@
 ./mnist/mnist/all/0/59987.png,0
 ./mnist/mnist/all/1/00000.png,1
 ./mnist/mnist/all/1/00001 (2).png,1
+./mnist/mnist/all/1/00001 (3).png,1
 ./mnist/mnist/all/1/00001.png,1
 ./mnist/mnist/all/1/00002 (2).png,1
+./mnist/mnist/all/1/00002 (3).png,1
 ./mnist/mnist/all/1/00002.png,1
 ./mnist/mnist/all/1/00003 (2).png,1
+./mnist/mnist/all/1/00003 (3).png,1
 ./mnist/mnist/all/1/00003.png,1
 ./mnist/mnist/all/1/00004 (2).png,1
+./mnist/mnist/all/1/00004 (3).png,1
 ./mnist/mnist/all/1/00004.png,1
 ./mnist/mnist/all/1/00005 (2).png,1
 ./mnist/mnist/all/1/00005.png,1
@@ -14548,12 +14556,17 @@
 ./mnist/mnist/all/1/59994.png,1
 ./mnist/mnist/all/2/00000.png,2
 ./mnist/mnist/all/2/00001 (2).png,2
+./mnist/mnist/all/2/00001 (3).png,2
 ./mnist/mnist/all/2/00001.png,2
 ./mnist/mnist/all/2/00002 (2).png,2
+./mnist/mnist/all/2/00002 (3).png,2
 ./mnist/mnist/all/2/00002.png,2
 ./mnist/mnist/all/2/00003 (2).png,2
+./mnist/mnist/all/2/00003 (3).png,2
 ./mnist/mnist/all/2/00003.png,2
+./mnist/mnist/all/2/00004 (2).png,2
 ./mnist/mnist/all/2/00004.png,2
+./mnist/mnist/all/2/00005 (2).png,2
 ./mnist/mnist/all/2/00005.png,2
 ./mnist/mnist/all/2/00016.png,2
 ./mnist/mnist/all/2/00025.png,2
@@ -21460,11 +21473,14 @@
 ./mnist/mnist/all/2/59991.png,2
 ./mnist/mnist/all/3/00001 (2).png,3
 ./mnist/mnist/all/3/00001 (3).png,3
+./mnist/mnist/all/3/00001 (4).png,3
 ./mnist/mnist/all/3/00001.png,3
 ./mnist/mnist/all/3/00002 (2).png,3
+./mnist/mnist/all/3/00002 (3).png,3
 ./mnist/mnist/all/3/00002.png,3
 ./mnist/mnist/all/3/00003 (2).png,3
 ./mnist/mnist/all/3/00003 (3).png,3
+./mnist/mnist/all/3/00003 (4).png,3
 ./mnist/mnist/all/3/00003.png,3
 ./mnist/mnist/all/3/00004.png,3
 ./mnist/mnist/all/3/00007.png,3
@@ -28510,12 +28526,15 @@
 ./mnist/mnist/all/4/00000.png,4
 ./mnist/mnist/all/4/00001 (2).png,4
 ./mnist/mnist/all/4/00001 (3).png,4
+./mnist/mnist/all/4/00001 (4).png,4
 ./mnist/mnist/all/4/00001.png,4
 ./mnist/mnist/all/4/00002 (2).png,4
 ./mnist/mnist/all/4/00002 (3).png,4
+./mnist/mnist/all/4/00002 (4).png,4
 ./mnist/mnist/all/4/00002.png,4
 ./mnist/mnist/all/4/00003 (2).png,4
 ./mnist/mnist/all/4/00003 (3).png,4
+./mnist/mnist/all/4/00003 (4).png,4
 ./mnist/mnist/all/4/00003.png,4
 ./mnist/mnist/all/4/00004.png,4
 ./mnist/mnist/all/4/00006.png,4
@@ -35240,12 +35259,16 @@
 ./mnist/mnist/all/5/00000.png,5
 ./mnist/mnist/all/5/00001 (2).png,5
 ./mnist/mnist/all/5/00001 (3).png,5
+./mnist/mnist/all/5/00001 (4).png,5
 ./mnist/mnist/all/5/00001.png,5
 ./mnist/mnist/all/5/00002 (2).png,5
 ./mnist/mnist/all/5/00002 (3).png,5
+./mnist/mnist/all/5/00002 (4).png,5
 ./mnist/mnist/all/5/00002.png,5
 ./mnist/mnist/all/5/00003 (2).png,5
+./mnist/mnist/all/5/00003 (3).png,5
 ./mnist/mnist/all/5/00003.png,5
+./mnist/mnist/all/5/00004.png,5
 ./mnist/mnist/all/5/00008.png,5
 ./mnist/mnist/all/5/00011.png,5
 ./mnist/mnist/all/5/00015.png,5
@@ -41482,12 +41505,16 @@
 ./mnist/mnist/all/6/00000.png,6
 ./mnist/mnist/all/6/00001 (2).png,6
 ./mnist/mnist/all/6/00001 (3).png,6
+./mnist/mnist/all/6/00001 (4).png,6
 ./mnist/mnist/all/6/00001.png,6
 ./mnist/mnist/all/6/00002 (2).png,6
 ./mnist/mnist/all/6/00002 (3).png,6
+./mnist/mnist/all/6/00002 (4).png,6
 ./mnist/mnist/all/6/00002.png,6
 ./mnist/mnist/all/6/00003 (2).png,6
+./mnist/mnist/all/6/00003 (3).png,6
 ./mnist/mnist/all/6/00003.png,6
+./mnist/mnist/all/6/00004 (2).png,6
 ./mnist/mnist/all/6/00004.png,6
 ./mnist/mnist/all/6/00011.png,6
 ./mnist/mnist/all/6/00013.png,6
@@ -48281,13 +48308,17 @@
 ./mnist/mnist/all/7/00000.png,7
 ./mnist/mnist/all/7/00001 (2).png,7
 ./mnist/mnist/all/7/00001 (3).png,7
+./mnist/mnist/all/7/00001 (4).png,7
 ./mnist/mnist/all/7/00001.png,7
 ./mnist/mnist/all/7/00002 (2).png,7
 ./mnist/mnist/all/7/00002 (3).png,7
+./mnist/mnist/all/7/00002 (4).png,7
 ./mnist/mnist/all/7/00002.png,7
 ./mnist/mnist/all/7/00003 (2).png,7
+./mnist/mnist/all/7/00003 (3).png,7
 ./mnist/mnist/all/7/00003.png,7
 ./mnist/mnist/all/7/00004 (2).png,7
+./mnist/mnist/all/7/00004 (3).png,7
 ./mnist/mnist/all/7/00004.png,7
 ./mnist/mnist/all/7/00005.png,7
 ./mnist/mnist/all/7/00006.png,7
@@ -55463,10 +55494,13 @@
 ./mnist/mnist/all/8/00000.png,8
 ./mnist/mnist/all/8/00001 (2).png,8
 ./mnist/mnist/all/8/00001 (3).png,8
+./mnist/mnist/all/8/00001 (4).png,8
 ./mnist/mnist/all/8/00001.png,8
 ./mnist/mnist/all/8/00002 (2).png,8
 ./mnist/mnist/all/8/00002 (3).png,8
+./mnist/mnist/all/8/00002 (4).png,8
 ./mnist/mnist/all/8/00002.png,8
+./mnist/mnist/all/8/00003.png,8
 ./mnist/mnist/all/8/00017.png,8
 ./mnist/mnist/all/8/00031.png,8
 ./mnist/mnist/all/8/00041.png,8
@@ -62198,9 +62232,11 @@
 ./mnist/mnist/all/9/00000.png,9
 ./mnist/mnist/all/9/00001 (2).png,9
 ./mnist/mnist/all/9/00001 (3).png,9
+./mnist/mnist/all/9/00001 (4).png,9
 ./mnist/mnist/all/9/00001.png,9
 ./mnist/mnist/all/9/00002 (2).png,9
 ./mnist/mnist/all/9/00002 (3).png,9
+./mnist/mnist/all/9/00002 (4).png,9
 ./mnist/mnist/all/9/00002.png,9
 ./mnist/mnist/all/9/00003 (2).png,9
 ./mnist/mnist/all/9/00003.png,9

@@ -1,0 +1,3 @@
+./mnist/mnist/test_myself_d/7/00001.png,7
+./mnist/mnist/test_myself_d/7/00002.png,7
+./mnist/mnist/test_myself_d/7/00003.png,7
