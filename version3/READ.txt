@@ -1,0 +1,8 @@
+用test3.py
+模型:定义了一个简单的三层全连接神经网络，每一层都是线性的， 在上面的Activation_Net的基础上，增加了一个加快收敛速度的方法——批标准化
+AllNum = 69166  # 总图像数
+SetTrainNum = 0.9  # 设置比例
+SetTestNum = 0.1
+
+train:62250
+test:6916+22
