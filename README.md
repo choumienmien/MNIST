@@ -29,6 +29,8 @@
 * [MNIST数据集的读取、显示以及全连接实现数字识别](https://blog.csdn.net/QLeelq/article/details/121069095 "懸停顯示")
 * [MNIST集的测试(详细步骤)](https://blog.csdn.net/whale_ss/article/details/129939960?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-129939960-blog-123781738.235%5Ev38%5Epc_relevant_default_base3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-129939960-blog-123781738.235%5Ev38%5Epc_relevant_default_base3&utm_relevant_index=5 "懸停顯示")
 * [PyTorch基础入门六：PyTorch搭建卷积神经网络实现MNIST手写数字识别](https://blog.csdn.net/out_of_memory_error/article/details/81434907 "懸停顯示")
+* [貓狗數據集](https://www.cnblogs.com/xiximayou/p/12398285.html "懸停顯示")
+* [万物皆用MNIST---MNIST数据集及创建自己的手写数字数据集](https://blog.csdn.net/m0_62128864/article/details/123781738 "懸停顯示")
 
 
 
