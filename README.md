@@ -15,7 +15,7 @@
 
 ## 網路說明
 
-#### 網路架構（Neural Network Architecture）
+### 網路架構（Neural Network Architecture）
 - 使用PyTorch框架創建一個帶有3層全連接網絡模型  
 - 損失函數:交叉熵(CrossEntropyLoss)
 - 最佳化器 (Optimizer) ：Adam()
@@ -30,17 +30,17 @@
   ![image](https://github.com/choumienmien/MNIST/assets/37107594/92ab1d13-8bbc-46f3-8eed-b34113767d94)
 
 
-#### 驗證模型(Cross-Validation)
+
+### 驗證模型(Cross-Validation)
 使用 K-Fold 方法進行測試資料劃分
 ![image](https://github.com/choumienmien/MNIST/assets/37107594/155a25bd-a1e0-4825-b54e-6c610a4d2c7a)
-
 [圖片來源](https://ithelp.ithome.com.tw/articles/10279240)
 
 - 資料分為「訓練階段 ( Train Phase )」以及「測試階段 ( Test Phase )」，
 - 透過K-Fold將訓練階段的數據，分為訓練集 ( Training Set ) 與驗證集 ( Valid Set )
 - 將訓練資料劃分成4、5、6個fold來看哪一個 fold 的準確率比較高，以作為測試階段的模型。
 
-#### 參數設定
+### 參數設定
 - 批量大小 ( batch_size ) = 64 
 - 學習率 ( learning_rate ) = 0.01
 - 循環次數 ( num_epoches ) = 7
