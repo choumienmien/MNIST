@@ -17,8 +17,6 @@
 
 ### 網路架構（Neural Network Architecture）
 - 使用PyTorch框架創建一個帶有3層全連接網絡模型  
-- 損失函數:交叉熵(CrossEntropyLoss)
-- 最佳化器 (Optimizer) ：Adam()
 - 使用卷積神經網絡（Convolutional Neural Network） 模型
  - 2 層捲積層 + 3 層全連接層 
 
@@ -29,11 +27,13 @@
 
   ![image](https://github.com/choumienmien/MNIST/assets/37107594/92ab1d13-8bbc-46f3-8eed-b34113767d94)
 
-
+- 損失函數:交叉熵(CrossEntropyLoss)
+- 最佳化器 (Optimizer) ：Adam()
 
 ### 驗證模型(Cross-Validation)
 使用 K-Fold 方法進行測試資料劃分
 ![image](https://github.com/choumienmien/MNIST/assets/37107594/155a25bd-a1e0-4825-b54e-6c610a4d2c7a)
+  
 [圖片來源](https://ithelp.ithome.com.tw/articles/10279240)
 
 - 資料分為「訓練階段 ( Train Phase )」以及「測試階段 ( Test Phase )」，
