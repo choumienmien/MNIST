@@ -10,7 +10,8 @@
   -  測試階段 (Test Phase) 筆數: 6,955，其中至少有 35 筆是加入自己手寫的資料。
   - 35 筆資料如下:
 
-     ![image](https://github.com/choumienmien/MNIST/assets/37107594/4ab5aa1f-8547-4a23-8468-05fd24b77270)
+  ![Figure_1](https://github.com/choumienmien/MNIST/assets/37107594/edc68025-c75e-4e32-be34-94b8be00b004)
+     
 
 
 
@@ -52,7 +53,7 @@
 ## 結論
 從下圖得知 fold: 5 整體的準確率比較高，但針對自己手寫數字進行測試，其準確率相較 fold_6 下降 8.57%，或許放入更多自己手寫的圖片進行訓練，會增加後續驗證的準確率。
 
-![image](https://github.com/choumienmien/MNIST/assets/37107594/d6ec69c9-c56b-4bb3-901f-55ece61b9656)
+![image](https://github.com/choumienmien/MNIST/assets/37107594/4ab5aa1f-8547-4a23-8468-05fd24b77270)
 
 
   
