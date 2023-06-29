@@ -17,7 +17,6 @@
 ## 網路說明
 
 ### 網路架構（Neural Network Architecture）
-- 使用PyTorch框架創建一個帶有3層全連接網絡模型  
 - 使用卷積神經網絡（Convolutional Neural Network） 模型
  - 2 層捲積層 (「特徵擷取 ) + 2 層池化層 ( 將圖像中歪斜偏移去除 ) + 3 層全連接層 ( 分類 )
 
