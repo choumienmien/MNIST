@@ -19,11 +19,21 @@
 - 使用PyTorch框架創建一個帶有3層全連接網絡模型  
 - 損失函數:交叉熵(CrossEntropyLoss)
 - 最佳化器 (Optimizer) ：Adam()
-- 使用 CNN 模型
+- 使用卷積神經網絡（Convolutional Neural Network） 模型
+ - 2 層捲積層 + 3 層全連接層 
+
+  <img width="510" alt="image" src="https://github.com/choumienmien/MNIST/assets/37107594/176b5c7d-9591-4e96-8e9a-4e6e5651a01f">
+
+  [圖片來源](https://medium.com/jameslearningnote/%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E7%AC%AC5-1%E8%AC%9B-%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E7%B5%A1%E4%BB%8B%E7%B4%B9-convolutional-neural-network-4f8249d65d4f)
+
+  ![image](https://github.com/choumienmien/MNIST/assets/37107594/92ab1d13-8bbc-46f3-8eed-b34113767d94)
+
 
 #### 驗證模型(Cross-Validation)
-使用 K-Fold 方法進行測試資料劃分[圖片來源](https://ithelp.ithome.com.tw/articles/10279240)
+使用 K-Fold 方法進行測試資料劃分
 ![image](https://github.com/choumienmien/MNIST/assets/37107594/155a25bd-a1e0-4825-b54e-6c610a4d2c7a)
+
+[圖片來源](https://ithelp.ithome.com.tw/articles/10279240)
 
 - 資料分為「訓練階段 ( Train Phase )」以及「測試階段 ( Test Phase )」，
 - 透過K-Fold將訓練階段的數據，分為訓練集 ( Training Set ) 與驗證集 ( Valid Set )
@@ -36,7 +46,7 @@
 - 總分割數 ( fold_num ) = 4
 
 ## 結論
-fold: 5 ，整體的準確率比較高，但針對自己手寫數字進行測試，其準確率相較 fold_6 下降 8.57%，或許放入更多自己手寫的圖片進行訓練，會增加後續驗證的準確率。
+從下圖得知 fold: 5 整體的準確率比較高，但針對自己手寫數字進行測試，其準確率相較 fold_6 下降 8.57%，或許放入更多自己手寫的圖片進行訓練，會增加後續驗證的準確率。
 ![image](https://github.com/choumienmien/MNIST/assets/37107594/98429f8c-5cc3-41b6-ac43-c4871144d1f0)
 
   
