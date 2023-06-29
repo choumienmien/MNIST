@@ -9,6 +9,7 @@
   -  訓練階段 (Train Phase) 筆數: 62,281
   -  測試階段 (Test Phase) 筆數: 6,955，其中至少有 35 筆是加入自己手寫的資料。
   - 35 筆資料如下:
+
      ![Figure_1](https://github.com/choumienmien/MNIST/assets/37107594/637253a6-c8c7-4898-97e7-dd7e5de0734a)
 
 
