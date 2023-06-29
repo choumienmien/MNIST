@@ -50,7 +50,9 @@
 
 ## 結論
 從下圖得知 fold: 5 整體的準確率比較高，但針對自己手寫數字進行測試，其準確率相較 fold_6 下降 8.57%，或許放入更多自己手寫的圖片進行訓練，會增加後續驗證的準確率。
-![image](https://github.com/choumienmien/MNIST/assets/37107594/98429f8c-5cc3-41b6-ac43-c4871144d1f0)
+
+![image](https://github.com/choumienmien/MNIST/assets/37107594/d6ec69c9-c56b-4bb3-901f-55ece61b9656)
+
 
   
 ## 資料來源
