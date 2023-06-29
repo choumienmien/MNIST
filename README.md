@@ -8,6 +8,9 @@
 資料總長度為:
   -  訓練階段 (Train Phase) 筆數: 62,281
   -  測試階段 (Test Phase) 筆數: 6,955，其中至少有 35 筆是加入自己手寫的資料。
+  - 35 筆資料如下:
+     ![Figure_1](https://github.com/choumienmien/MNIST/assets/37107594/637253a6-c8c7-4898-97e7-dd7e5de0734a)
+
 
 ## 網路說明
 
@@ -32,8 +35,8 @@
 - 總分割數 ( fold_num ) = 4
 
 ## 結論
-
-![Uploading image.png…]()
+fold: 5 ，整體的準確率比較高，但針對自己手寫數字進行測試，其準確率相較 fold_6 下降 8.57%，或許放入更多自己手寫的圖片進行訓練，會增加後續驗證的準確率。
+![image](https://github.com/choumienmien/MNIST/assets/37107594/98429f8c-5cc3-41b6-ac43-c4871144d1f0)
 
   
 ## 資料來源
