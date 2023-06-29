@@ -18,7 +18,7 @@
 ### 網路架構（Neural Network Architecture）
 - 使用PyTorch框架創建一個帶有3層全連接網絡模型  
 - 使用卷積神經網絡（Convolutional Neural Network） 模型
- - 2 層捲積層 + 3 層全連接層 
+ - 2 層捲積層 (「特徵擷取 ) + 2 層池化層 ( 將圖像中歪斜偏移去除 ) + 3 層全連接層 ( 分類 )
 
   ![image](https://github.com/choumienmien/MNIST/assets/37107594/511dc877-6344-4f00-a6e7-32923f484ee4)
 
@@ -27,6 +27,7 @@
 
   ![image](https://github.com/choumienmien/MNIST/assets/37107594/92ab1d13-8bbc-46f3-8eed-b34113767d94)
 
+- 激活函數 ReLU
 - 損失函數:交叉熵(CrossEntropyLoss)
 - 最佳化器 (Optimizer) ：Adam()
 
