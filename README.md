@@ -5,6 +5,9 @@
 ## 資料集（Dataset）
 [主要資料庫](http://pan.baidu.com/s/1pLMV4Kz "懸停顯示")
 並加入自己創建的手寫數字，分別放入訓練集(驗證集)以及測試集
+資料總長度為:
+  -  訓練階段 (Train Phase) 筆數: 62,281
+  -  測試階段 (Test Phase) 筆數: 6,955，其中至少有 35 筆是加入自己手寫的資料。
 
 ## 網路說明
 
@@ -18,12 +21,21 @@
 使用 K-Fold 方法進行測試資料劃分[圖片來源](https://ithelp.ithome.com.tw/articles/10279240)
 ![image](https://github.com/choumienmien/MNIST/assets/37107594/155a25bd-a1e0-4825-b54e-6c610a4d2c7a)
 
-- 資料分為「訓練階段(Train Phase)」以及「測試階段(Test Phase)」，
-- 透過K-Fold將訓練階段的數據，分為訓練集(Training Set)與驗證集(Valid Set)
+- 資料分為「訓練階段 ( Train Phase )」以及「測試階段 ( Test Phase )」，
+- 透過K-Fold將訓練階段的數據，分為訓練集 ( Training Set ) 與驗證集 ( Valid Set )
 - 將訓練資料劃分成4、5、6個fold來看哪一個 fold 的準確率比較高，以作為測試階段的模型。
 
 #### 參數設定
+- 批量大小 ( batch_size ) = 64 
+- 學習率 ( learning_rate ) = 0.01
+- 循環次數 ( num_epoches ) = 7
+- 總分割數 ( fold_num ) = 4
 
+## 結論
+
+![Uploading image.png…]()
+
+  
 ## 資料來源
 * [动手撸个自己的数据集进行训练Pytorch框架（索引式）](https://juejin.cn/post/7078130257970069518 "懸停顯示")
 * [MNIST数据集的读取、显示以及全连接实现数字识别](https://blog.csdn.net/QLeelq/article/details/121069095 "懸停顯示")
@@ -31,7 +43,3 @@
 * [PyTorch基础入门六：PyTorch搭建卷积神经网络实现MNIST手写数字识别](https://blog.csdn.net/out_of_memory_error/article/details/81434907 "懸停顯示")
 * [貓狗數據集](https://www.cnblogs.com/xiximayou/p/12398285.html "懸停顯示")
 * [万物皆用MNIST---MNIST数据集及创建自己的手写数字数据集](https://blog.csdn.net/m0_62128864/article/details/123781738 "懸停顯示")
-
-
-
-  
