@@ -34,6 +34,7 @@
 使用 K-Fold 方法進行測試資料劃分
 
 ![image](https://github.com/choumienmien/MNIST/assets/37107594/155a25bd-a1e0-4825-b54e-6c610a4d2c7a)
+
 [圖片來源](https://ithelp.ithome.com.tw/articles/10279240 "懸停顯示")
 
 
